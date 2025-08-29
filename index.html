@@ -4,8 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome</title>
+    <style>
+        /* Mobile */
+        @media (max-width: 550px) {
+            .profile-info {
+                flex-direction: column;
+            }
+            .profile-text {
+                text-align: center;
+            }
+        }
+
+        body {
+            overflow: hidden;
+            font-family: Roboto, sans-serif;
+            background-color: #1E1E1E;
+            color: #F8F8F8;
+        }
+        .profile-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .profile-picture {
+            width: 128px;
+            border-radius: 15%;
+        }
+        .profile-info {
+            display: flex;
+            align-items: center;
+            margin: 32px;
+        }
+        .profile-text {
+            margin: 32px;
+        }
+        .social-links {
+            display: flex;
+            gap: 64px;
+        }
+        .icon {
+            width: 32px;
+            height: auto;
+        }
+    </style>
 </head>
 <body>
-    Under Construction
-</body>
+    <div class="profile-container">
+        <div class="profile-info">
+            <img src="media/pfp.webp" alt="Profile Picture" class="profile-picture">
+            <div class="profile-text">
+                <p style="font-size: 27px; margin-bottom: -10px;">Erik&nbsp;Daniel&nbsp;Pettersson</p>
+                <p style="font-size: 17px;">Computer&nbsp;Science&nbsp;BSc @&nbsp;City&nbsp;St.&nbsp;George's</p>
+            </div>
+        </div>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/erik-daniel-pettersson/" target="_blank">
+                <img src="media/linkedin.svg" alt="Linkedin" class="icon">
+            </a>
+            <a href="https://github.com/Erik-Pettersson/" target="_blank">
+                <img src="media/github.svg" alt="Github" class="icon">
+            </a>
+            <a href="mailto:contact@erik-pettersson.com">
+                <img src="media/email.svg" alt="Email" class="icon">
+            </a>
+        </div>
+    </div>
 </html>
