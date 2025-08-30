@@ -22,19 +22,26 @@
             justify-content: center;
             height: 100vh;
             gap: 32px;
-            margin: 32px;
-        }
-        .profile-picture {
-            width: 128px;
-            border-radius: 15%;
+            margin: 0px 32px 0px 32px;
         }
         .profile-info {
             display: flex;
             align-items: center;
             gap: 32px;
         }
+        .profile-picture {
+            width: 128px;
+            border-radius: 15%;
+        }
         .profile-text span {
             text-wrap: nowrap;
+        }
+        .name {
+            font-size: 31px; 
+            font-weight: bold;
+        }
+        .headline {
+            font-size: 19px;
         }
         .social-links {
             display: flex;
@@ -42,20 +49,42 @@
             align-items: center;
             justify-content: center;
             gap: 64px;
+            min-height: 36px;
         }
         .icon {
             width: 32px;
-            height: auto;
+            height: 32px;
         }
-        @media (max-width: 510px) {
+        @media (max-width: 570px) {
+            .profile-container {
+                gap: 24px;
+            }
             .profile-info {
                 flex-direction: column;
+            }
+            .profile-picture {
+                width: 96px;
+                min-height: 96px;
+            }
+            .profile-info {
+                gap: 24px;
             }
             .profile-text {
                 text-align: center;
             }
-            .profile-picture {
-                margin-right: 0;
+            .name {
+                font-size: 19px;
+            }
+            .headline {
+                font-size: 12px;
+            }
+            .social-links {
+                gap: 48px;
+                min-height: 28px;
+            }
+            .icon {
+                width: 24px;
+                height: 24px;
             }
         }
     </style>
@@ -63,10 +92,12 @@
 <body>
     <div class="profile-container">
         <div class="profile-info">
-            <img src="media/pfp.webp" alt="Profile Picture" class="profile-picture">
+            <img src="media/pfp.webp" alt="Profile Picture" class="profile-picture" fetchpriority="high">
             <div class="profile-text">
-                <p style="font-size: 27px;">Erik Daniel Pettersson</p>
-                <p style="font-size: 17px;">Computer Science BSc <span>@ City St. George's</span></p>
+                <p class="name">Erik Daniel Pettersson</p>
+                <p class="headline">Computer Science BSc <span>@ City St. George's</span></p>
+                <br>
+                <p class="location" style="font-size: 12px;">Prague, Czechia</p>
             </div>
         </div>
         <div class="social-links">
@@ -81,4 +112,5 @@
             </a>
         </div>
     </div>
+</body>
 </html>
