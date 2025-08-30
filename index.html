@@ -3,15 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Erik Daniel Pettersson's personal website">
     <title>Erik Daniel Pettersson</title>
     <style>
-        @media (max-width: 550px) {
-            .profile-info {
-                flex-direction: column;
-            }
-            .profile-text {
-                text-align: center;
-            }
+        p {
+            margin: 0;
         }
         body {
             overflow: hidden;
@@ -25,6 +21,8 @@
             align-items: center;
             justify-content: center;
             height: 100vh;
+            gap: 32px;
+            margin: 32px;
         }
         .profile-picture {
             width: 128px;
@@ -33,18 +31,32 @@
         .profile-info {
             display: flex;
             align-items: center;
-            margin: 32px;
+            gap: 32px;
         }
-        .profile-text {
-            margin: 32px;
+        .profile-text span {
+            text-wrap: nowrap;
         }
         .social-links {
             display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
             gap: 64px;
         }
         .icon {
             width: 32px;
             height: auto;
+        }
+        @media (max-width: 510px) {
+            .profile-info {
+                flex-direction: column;
+            }
+            .profile-text {
+                text-align: center;
+            }
+            .profile-picture {
+                margin-right: 0;
+            }
         }
     </style>
 </head>
@@ -53,8 +65,8 @@
         <div class="profile-info">
             <img src="media/pfp.webp" alt="Profile Picture" class="profile-picture">
             <div class="profile-text">
-                <p style="font-size: 27px; margin-bottom: -10px;">Erik&nbsp;Daniel&nbsp;Pettersson</p>
-                <p style="font-size: 17px;">Computer&nbsp;Science&nbsp;BSc @&nbsp;City&nbsp;St.&nbsp;George's</p>
+                <p style="font-size: 27px;">Erik Daniel Pettersson</p>
+                <p style="font-size: 17px;">Computer Science BSc <span>@ City St. George's</span></p>
             </div>
         </div>
         <div class="social-links">
