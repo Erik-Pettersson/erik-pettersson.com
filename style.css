@@ -126,34 +126,28 @@ footer a:hover, footer a:focus {
 /* Animation */
 @media (prefers-reduced-motion: no-preference) {
     .profile-info {
-        opacity: 0; 
-        animation: fadeInUp 0.8s ease-out forwards;
+        animation: fadeInUp 0.8s ease-out both;
     }
     .social-links {
-        opacity: 0; 
-        animation: fadeInUp 0.8s ease-out 0.4s forwards;
+        animation: fadeInUp 0.8s ease-out 0.4s both;
     }
     .social-links a:hover, .social-links a:focus {
         transform: scale(1.1);
     }
     #mover1 {
         animation:
-        powerUp 2s 0.1s ease-out forwards,
+        powerUp 2s 0.1s ease-out both,
         moveGlow1 10s ease-in-out infinite alternate,
         spin1 7s linear infinite;
     }
     #mover2 {
         animation:
-        powerUp 2s 0.1s ease-out forwards,
+        powerUp 2s 0.1s ease-out both,
         moveGlow2 10s ease-in-out infinite alternate,
         spin2 5s linear infinite;
     }
-    .blob-mover {
-        opacity: 0; 
-    }
     footer {
-        opacity: 0; 
-        animation: fadeInUp 0.8s ease-out 0.8s forwards;
+        animation: fadeInUp 0.8s ease-out 0.8s both;
     }
 }
 .social-links a:hover, .social-links a:focus {
@@ -169,7 +163,7 @@ footer a:hover, footer a:focus {
 }
 @keyframes fadeInUp {
     from {
-        opacity: 0;
+        opacity: 0.01;
         transform: translateY(20px);
     }
     to {
@@ -251,7 +245,7 @@ footer a:hover, footer a:focus {
 @keyframes powerUp {
     from {
         transform: scale(0.3);
-        opacity: 0;
+        opacity: 0.01;
     }
     to {
         transform: scale(1);
